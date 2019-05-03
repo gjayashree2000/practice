@@ -1,0 +1,51 @@
+<html>
+<html>
+<head>
+<body>
+<form> 
+    FIRST NAME:<input type="text" id="text1" maxlength="10">
+	LAST NAME:<input type="text" id="text2" maxlength="10"><br><br>
+	E-MAIL:<input type="email" id="text2" maxlength="30"><br><br>
+	PASSWORD:<input type="password" id="pwd1" maxlength="10"><br><br>
+	<input type="radio" id="v1" name="gender" value="male">male<br><br>
+	<input type="radio" id="v2" name="gender" value="female">female<br><br>
+	<input type="radio" id="v3" name="gender" value="other">other<br><br>
+	DOOR NUMBER AND STREET:<input type="text" id="door number" maxlength="50" onchange="func()"><br><br>
+	AREA NAME:<input type="text" id="area name" maxlength="30" onchange="func()" disabled><br><br>
+	PINCODE:<input type="text" id="pincode" maxlength="30" disabled><br><br>
+	<input type="checkbox" id="v1" name="text" value="agree" onclick="func()">"I agree upon terms and conditions"<br><br>
+	<input type="submit" id="button1" value="ok" disabled>
+</form>
+<script>
+    function  func()
+	{
+	    var doorno=document.getElementById("door number");
+		var area=document.getElementById("area name");
+		var pin=document.getElementById("pincode");
+		var agr=document.getElementById("button1");
+		if(doorno=="none")
+		{
+		   document.getElementById("area name").disabled=true;
+		}
+		else
+		{
+			document.getElementById("area name").disabled=false
+		}
+		if(area=="none")
+		{
+		   document.getElementById("pincode").disabled=true;
+		}
+		else
+		{
+			document.getElementById("pincode").disabled=false
+		}
+		if(agr.checked)
+		{
+			document.getElementById("button1").disabled=false;
+		}
+		else
+		{
+			document.getElementById("button1").disabled=true;
+		}
+	}
+</script>
